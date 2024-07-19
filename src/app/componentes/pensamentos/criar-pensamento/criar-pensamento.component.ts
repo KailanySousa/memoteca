@@ -14,4 +14,12 @@ export class CriarPensamentoComponent {
     modelo: ''
   };
 
+  salvarPensamento() {
+    alert('Novo pensamento criado!');
+  }
+
+  cancelar() {
+    alert('Ação cancelada!')
+  }
+
 }
