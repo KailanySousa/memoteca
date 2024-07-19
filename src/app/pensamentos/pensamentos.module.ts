@@ -5,6 +5,7 @@ import { CriarPensamentoComponent } from './pages/criar-pensamento/criar-pensame
 import { PensamentoComponent } from './componentes/pensamento/pensamento.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     RouterModule
-  ]
+  ],
+  providers: [provideHttpClient()]
 })
 export class PensamentosModule { }

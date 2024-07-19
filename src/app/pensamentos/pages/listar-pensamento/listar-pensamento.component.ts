@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Pensamento } from '../../interfaces/Pensamento.model';
 import Modelo from '../../enums/Modelo.enum';
+import { PensamentoService } from '../../services/pensamento.service';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -9,19 +10,13 @@ import Modelo from '../../enums/Modelo.enum';
 })
 export class ListarPensamentoComponent {
 
-  listaPensamentos: Pensamento[] = [
-    {
-      id: 1,
-      conteudo: 'I love Angular',
-      autoria: 'Dev',
-      modelo: Modelo.MODELO1
-    },
-    {
-      id: 2,
-      conteudo: 'Só sei que nada sei',
-      autoria: 'Sócrates',
-      modelo: Modelo.MODELO3
-    }
-  ];
+  listaPensamentos: Pensamento[] = [];
 
+  constructor(
+    private service: PensamentoService
+  ) { }
+
+  ngOnInit(): void {
+    this.service.listar().subscribe(listaPensamentos => this.listaPensamentos = listaPensamentos);
+  }
 }
