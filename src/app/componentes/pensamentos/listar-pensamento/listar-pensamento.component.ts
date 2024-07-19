@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Pensamento } from '../../../models/Pensamento.model';
+import Modelo from '../../../enums/Modelo.enum';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -7,16 +9,16 @@ import { Component } from '@angular/core';
 })
 export class ListarPensamentoComponent {
 
-  listaPensamentos = [
+  listaPensamentos: Pensamento[] = [
     {
       conteudo: 'I love Angular',
       autoria: 'Dev',
-      modelo: 'modelo1'
+      modelo: Modelo.MODELO1
     },
     {
       conteudo: 'Só sei que nada sei',
       autoria: 'Sócrates',
-      modelo: 'modelo3'
+      modelo: Modelo.MODELO2
     }
   ];
 
