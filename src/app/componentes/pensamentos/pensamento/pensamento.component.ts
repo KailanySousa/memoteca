@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Pensamento } from '../../../models/Pensamento.model';
+import { Pensamento } from '../interfaces/Pensamento.model';
 
 @Component({
   selector: 'app-pensamento',

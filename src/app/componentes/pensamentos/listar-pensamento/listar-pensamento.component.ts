@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Pensamento } from '../../../models/Pensamento.model';
-import Modelo from '../../../enums/Modelo.enum';
+import { Pensamento } from '../interfaces/Pensamento.model';
+import Modelo from '../enums/Modelo.enum';
 
 @Component({
   selector: 'app-listar-pensamento',
