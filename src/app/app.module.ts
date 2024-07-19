@@ -3,26 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
-import { RodapeComponent } from './componentes/rodape/rodape.component';
-import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { FormsModule } from '@angular/forms';
-import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
-import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
+import { CriarPensamentoComponent } from './pensamentos/pages/criar-pensamento/criar-pensamento.component';
+import { ListarPensamentoComponent } from './pensamentos/pages/listar-pensamento/listar-pensamento.component';
+import { PensamentoComponent } from './pensamentos/componentes/pensamento/pensamento.component';
+import { SharedModule } from './shared/shared.module';
+import { PensamentosModule } from './pensamentos/pensamentos.module';
+import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CabecalhoComponent,
-    RodapeComponent,
-    CriarPensamentoComponent,
-    ListarPensamentoComponent,
-    PensamentoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    SharedModule,
+    PensamentosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
