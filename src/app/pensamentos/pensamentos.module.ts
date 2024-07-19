@@ -6,6 +6,7 @@ import { PensamentoComponent } from './componentes/pensamento/pensamento.compone
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
+import { ExcluirPensamentoComponent } from './excluir-pensamento/excluir-pensamento.component';
 
 
 
@@ -13,7 +14,8 @@ import { provideHttpClient } from '@angular/common/http';
   declarations: [
     ListarPensamentoComponent,
     CriarPensamentoComponent,
-    PensamentoComponent
+    PensamentoComponent,
+    ExcluirPensamentoComponent
   ],
   imports: [
     CommonModule,
