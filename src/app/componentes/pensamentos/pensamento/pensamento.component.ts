@@ -9,4 +9,8 @@ import { Pensamento } from '../../../models/Pensamento.model';
 export class PensamentoComponent {
   
   @Input() pensamento!: Pensamento;
+
+  get larguraPensamento(): string {
+      return this.pensamento.conteudo.length >= 255 ? 'pensamento-g' : 'pensamento-p';
+  }
 }

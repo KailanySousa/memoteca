@@ -18,7 +18,7 @@ export class ListarPensamentoComponent {
     {
       conteudo: 'Só sei que nada sei',
       autoria: 'Sócrates',
-      modelo: Modelo.MODELO2
+      modelo: Modelo.MODELO3
     }
   ];
 
