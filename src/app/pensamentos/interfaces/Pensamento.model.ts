@@ -1,7 +1,7 @@
 import ModeloEnum from "../enums/Modelo.enum";
 
 export interface Pensamento {
-    id?: number;
+    id?: string;
     conteudo: string;
     autoria: string;
     modelo: ModeloEnum | ''

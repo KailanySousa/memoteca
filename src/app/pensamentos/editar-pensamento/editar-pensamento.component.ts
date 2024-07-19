@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
+import { Pensamento } from '../interfaces/Pensamento.model';
 import { PensamentoService } from '../services/pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pensamento } from '../interfaces/Pensamento.model';
 
 @Component({
-  selector: 'app-excluir-pensamento',
-  templateUrl: './excluir-pensamento.component.html',
-  styleUrl: './excluir-pensamento.component.css'
+  selector: 'app-editar-pensamento',
+  templateUrl: './editar-pensamento.component.html',
+  styleUrl: './editar-pensamento.component.css'
 })
-export class ExcluirPensamentoComponent {
+export class EditarPensamentoComponent {
 
-   pensamento: Pensamento = {
+  pensamento: Pensamento = {
     id: '',
     conteudo: '',
     autoria: '',
@@ -30,16 +30,15 @@ export class ExcluirPensamentoComponent {
     })
   }
 
-  excluirPensamento() {
-    if(this.pensamento.id) {
-      this.service.excluir(this.pensamento.id).subscribe(() => {
-        this.router.navigate(['/listar'])
-      })
-    }
+  editarPensamento() {
+    this.service.editar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/listar'])
+    })
+
   }
 
   cancelar() {
     this.router.navigate(['/listar'])
   }
-
+  
 }

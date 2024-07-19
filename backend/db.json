@@ -1,19 +1,19 @@
 {
     "pensamentos": [
         {
-            "id": 1,
+            "id": "1",
             "conteudo": "I love Angular",
             "autoria": "Angular",
             "modelo": "modelo1"
         },
         {
-            "id": 2,
+            "id": "2",
             "conteudo": "Só sei que nada sei",
             "autoria": "Sócrates",
             "modelo": "modelo2"
         },
         {
-            "id": 3,
+            "id": "3",
             "conteudo": "Que eu saiba não sei",
             "autoria": "Kailany",
             "modelo": "modelo3"
