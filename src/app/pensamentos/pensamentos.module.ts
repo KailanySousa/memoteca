@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { ExcluirPensamentoComponent } from './excluir-pensamento/excluir-pensamento.component';
-import { EditarPensamentoComponent } from './editar-pensamento/editar-pensamento.component';
+import { EditarPensamentoComponent } from './pages/editar-pensamento/editar-pensamento.component';
 
 
 
