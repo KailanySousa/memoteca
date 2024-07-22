@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { ExcluirPensamentoComponent } from './excluir-pensamento/excluir-pensamento.component';
 import { EditarPensamentoComponent } from './pages/editar-pensamento/editar-pensamento.component';
+import { BotaoCarregarMaisComponent } from './componentes/botao-carregar-mais/botao-carregar-mais.component';
 
 
 
@@ -17,7 +18,8 @@ import { EditarPensamentoComponent } from './pages/editar-pensamento/editar-pens
     CriarPensamentoComponent,
     PensamentoComponent,
     ExcluirPensamentoComponent,
-    EditarPensamentoComponent
+    EditarPensamentoComponent,
+    BotaoCarregarMaisComponent
   ],
   imports: [
     CommonModule,

@@ -6,3 +6,8 @@ export interface Pensamento {
     autoria: string;
     modelo: ModeloEnum | ''
 }
+
+export interface PensamentoResponse {
+    prev: number;
+    data: Pensamento[]
+}

@@ -12,12 +12,26 @@ export class ListarPensamentoComponent {
 
   listaPensamentos: Pensamento[] = [];
   paginaAtual: number = 1;
+  hasMaisPensamentos: boolean = true;
 
   constructor(
     private service: PensamentoService
   ) { }
 
   ngOnInit(): void {
-    this.service.listar(this.paginaAtual).subscribe(listaPensamentos => this.listaPensamentos = listaPensamentos);
+     this.service.listar(++this.paginaAtual)
+      .subscribe(listaPensamentos => {
+        this.listaPensamentos = listaPensamentos.data;
+        this.hasMaisPensamentos = !!listaPensamentos.prev;
+      });
+  }
+
+  carregarMaisPensamentos() {
+    this.service.listar(++this.paginaAtual)
+      .subscribe(listaPensamentos => {
+        this.listaPensamentos.push(...listaPensamentos.data);
+        this.hasMaisPensamentos = !!listaPensamentos.prev;
+      });
+    
   }
 }
