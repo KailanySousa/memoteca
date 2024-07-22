@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListarPensamentoComponent } from './pages/listar-pensamento/listar-pensamento.component';
 import { CriarPensamentoComponent } from './pages/criar-pensamento/criar-pensamento.component';
 import { PensamentoComponent } from './componentes/pensamento/pensamento.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { ExcluirPensamentoComponent } from './excluir-pensamento/excluir-pensamento.component';
@@ -22,7 +22,8 @@ import { EditarPensamentoComponent } from './editar-pensamento/editar-pensamento
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [provideHttpClient()]
 })
