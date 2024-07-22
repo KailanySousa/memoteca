@@ -30,7 +30,7 @@ export class CriarPensamentoComponent {
         Validators.minLength(3),
         Validators.pattern(/(,|\s)*\S(.|\s)*/)
       ])],
-      modelo: ['', [Validators.required]]
+      modelo: ['modelo1', [Validators.required]]
     });
   }
 
