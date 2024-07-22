@@ -13,6 +13,7 @@ export class ListarPensamentoComponent {
   listaPensamentos: Pensamento[] = [];
   paginaAtual: number = 1;
   hasMaisPensamentos: boolean = true;
+  filtro: string = '';
 
   constructor(
     private service: PensamentoService
@@ -33,5 +34,15 @@ export class ListarPensamentoComponent {
         this.hasMaisPensamentos = !!listaPensamentos.prev;
       });
     
+  }
+
+  pesquisarPensamentos() {
+    this.hasMaisPensamentos = true;
+    this.paginaAtual = 1;
+    this.service.listar(this.paginaAtual, this.filtro)
+      .subscribe(listaPensamentos => {
+        this.listaPensamentos = listaPensamentos.data;
+        this.hasMaisPensamentos = !!listaPensamentos.prev;
+      });
   }
 }

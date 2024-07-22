@@ -14,10 +14,13 @@ export class PensamentoService {
     private http: HttpClient
   ) { }
   
-  listar(pagina: number, itensPorPagina: number = 6): Observable<PensamentoResponse> {
-    const params = new HttpParams()
+  listar(pagina: number, filtro: string = '', itensPorPagina: number = 6): Observable<PensamentoResponse> {
+    let params = new HttpParams()
       .set('_page', pagina)
       .set('_per_page', itensPorPagina);
+    
+    
+    if (filtro.trim().length > 2) params = params.set('autoria', filtro);
     
     return this.http.get<PensamentoResponse>(this.API, { params });
   }
