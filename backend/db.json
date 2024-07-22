@@ -4,19 +4,22 @@
       "id": "1",
       "conteudo": "I love Angular",
       "autoria": "Angular",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": "2",
       "conteudo": "Só sei que nada sei",
       "autoria": "Sócrates",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": true
     },
     {
       "id": "3",
       "conteudo": "Que eu saiba não sei",
       "autoria": "Kailany",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     }
   ]
 }

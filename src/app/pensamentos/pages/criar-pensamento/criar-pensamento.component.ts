@@ -32,7 +32,8 @@ export class CriarPensamentoComponent {
         Validators.pattern(/(,|\s)*\S(.|\s)*/),
         minusculoValidator
       ])],
-      modelo: ['modelo1', [Validators.required]]
+      modelo: ['modelo1', [Validators.required]],
+      favorito: [false]
     });
   }
 

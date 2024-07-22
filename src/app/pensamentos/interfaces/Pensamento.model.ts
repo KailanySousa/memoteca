@@ -4,7 +4,8 @@ export interface Pensamento {
     id?: string;
     conteudo: string;
     autoria: string;
-    modelo: ModeloEnum | ''
+    modelo: ModeloEnum | '';
+    favorito: boolean
 }
 
 export interface PensamentoResponse {
