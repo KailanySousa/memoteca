@@ -34,6 +34,11 @@ export class CriarPensamentoComponent {
     });
   }
 
+  get habilitarBotao(): string {
+    if (this.formulario.valid) return 'botao';
+    return 'botao__desabilitado';
+  }
+
   salvarPensamento() {
     if (this.formulario.valid) {
       this.service.criar(this.formulario.value).subscribe(() => this.router.navigate(['/listar']));
